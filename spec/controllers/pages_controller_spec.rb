@@ -41,5 +41,18 @@ describe PagesController do
 													:content => "Projet RoR Arnou Baptiste | A propos")
     end
   end
+  
+  describe "GET 'help'" do
+		it "devrait reussir" do
+			get :help
+			response.should be_success
+		end
+		
+		it "devrait avoir le bon titre" do
+			get :help
+			response.should have_selector("title",
+													:content => "Projet RoR Arnou Baptiste | Aide")
+    end
+  end
 
 end
