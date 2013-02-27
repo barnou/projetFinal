@@ -32,4 +32,32 @@ describe "Users" do
 			end
 		end
   end
+
+	describe "connexion/deconnexion" do
+		
+		describe "echec" do
+			
+			it "ne devrait pas identifier l'utilisateur" do
+				visit signin_path
+				fill_in "email",				:with => ""
+				fill_in "Mot de passe",	:with => ""
+				click_button
+				response.should have_selector("div", :content => "Combinaison email/mot de passe invalide.")
+			end
+		end
+		
+		describe "succes" do
+			
+			it "devrait identifier un utilisateur puis le deconnecter" do
+				user = Factory(:user)
+				visit signin_path
+				fill_in "email",				:with => user.email
+				fill_in "Mot de passe",	:with =>user.password
+				click_button
+				controller.should be_signed_in
+				click_link "Deconnexion"
+				controller.should_not be_signed_in
+			end
+		end
+	end
 end
