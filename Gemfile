@@ -13,12 +13,14 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 group :development do
 	gem 'rspec-rails','2.5.0'
 	gem 'faker','0.3.1'
+	gem 'database_cleaner'
 end
 
 group :test do
 	gem 'rspec','2.5.0'
 	gem 'webrat'
 	gem 'factory_girl_rails','1.0'
+	gem 'database_cleaner'
 end
 
 # Use unicorn as the web server
