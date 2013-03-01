@@ -10,6 +10,9 @@ describe User do
 			}
 	end
 	
+	it { should respond_to(:feed) }
+	it { should respond_to(:relationships) }
+	
 	it "devrait creer une nouvelle instance dotee d'attributs valides" do
 		User.create!(@attr)
 	end
