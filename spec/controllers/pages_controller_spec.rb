@@ -8,15 +8,34 @@ describe PagesController do
 	end
 	
   describe "GET 'home'" do
-    it "should be successful" do
-      get :home
-      response.should be_success
+    describe "quand pas identifie" do
+			before(:each) do
+				get :home
+			end
+			
+			it "devrait reussir" do
+				response.should be_success
+			end
+			
+			it "devrait avoir le bon titre" do
+				response.should have_selector("title", :content => "#{@titre_de_base} | Accueil")
+			end
     end
     
-    it "devrait avoir le bon titre" do
-			get :home
-			response.should have_selector("title",
-													:content => @titre_de_base+" | Accueil")
+    describe "quand identifie" do
+			before(:each) do
+				@user = test_sign_in(Factory(:user))
+				other_user = Factory(:user,:email => Factory.next(:email))
+				other_user.follow!(@user)
+			end
+			
+			it "devrait avoir le bon compte d'auteurs et de lecteurs" do
+				get :home
+				response.should have_selector("a", :href => following_user_path(@user),
+																					 :content => "0 auteurs suivis")
+				response.should have_selector("a", :href => followers_user_path(@user),
+																					 :content => "1 lecteur")
+			end
     end
   end
 
