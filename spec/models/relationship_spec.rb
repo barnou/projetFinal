@@ -12,13 +12,12 @@ describe Relationship do
 		@relationship.save!
 	end
 	
-<<<<<<< HEAD
 	describe "attribut accessible" do
 		it "ne devrait pas permettre d'acceder a 'follower_id'" do
 			expect do
 				Relationship.new(follower_id: follower.id)
 			end
-=======
+			
 	describe "Methode de suivi" do
 		before(:each) do
 			@relationship.save
@@ -34,7 +33,6 @@ describe Relationship do
 		
 		it "devrait avoir le bon utilisateur suivi (auteur)" do
 			@relationship.followed.should == @followed
->>>>>>> suivi-utilisateurs
 		end
 	end
 

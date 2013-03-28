@@ -7,7 +7,7 @@ class Micropost < ActiveRecord::Base
 	validates :user_id, :presence => true
 	
 	default_scope :order => 'microposts.created_at DESC'
-	scope :from_users_followed_by, lamda { |user| followed_by(user)}
+	scope :from_users_followed_by, lambda { |user| followed_by(user)}
 	
 	private
 		
