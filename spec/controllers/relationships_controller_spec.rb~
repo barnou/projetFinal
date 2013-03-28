@@ -9,7 +9,7 @@ describe RelationshipsController do
 		end
 		
 		it "devrait exiger l'identification pour detruire" do
-			delete :destroy, :id => 1
+			delete :detroy, :id => 1
 			response.should redirect_to(signin_path)
 		end
 	end
