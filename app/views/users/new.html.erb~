@@ -26,8 +26,6 @@
 		<%= f.text_field :bestWeight %>
 	</div>
 	<div class="field">
-		<%= f.label :height, "Taille" %><br />
-		<%= f.text_field :height %>
 	</div>
 	<div class="actions">
 		<%= f.submit "Inscription" %>

@@ -29,7 +29,7 @@ def make_users
 								 :password_confirmation => password,
 								 :weight => Random.new.rand(40..130),
 								 :bestWeight => 39,
-								 :height => Random.new.rand(120..220))
+								 :height => Random.new.rand(101..220))
 	end
 end
 

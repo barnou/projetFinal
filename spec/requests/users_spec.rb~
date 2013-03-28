@@ -12,7 +12,7 @@ describe "Users" do
 					fill_in "Confirmation du mot de passe",		:with => ""
 					fill_in "Poids",													:with => ""
 					fill_in "Poids ideal",										:with => ""
-					fill_in "Taille",													:with => ""
+					fill_in "height",													:with => ""
 					click_button
 					response.should render_template('users/new')
 					response.should have_selector("div#error_explanation")

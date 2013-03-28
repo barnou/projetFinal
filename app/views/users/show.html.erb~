@@ -18,7 +18,7 @@
       <strong>Poids</strong> <%= @user.weight %><br />
       <strong>Poids idéal</strong> <%= @user.bestWeight %><br />
       <strong>Taille</strong> <%= @user.height %><br />
-      <strong>IMC:</strong><br /> <%= @user.imc %><br />
+      <strong>IMC</strong><br /> <%= @user.imc %><br />
       <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
       <strong>Messages:</strong> <%= @user.microposts.count %>
       <%= render 'shared/stats' %>

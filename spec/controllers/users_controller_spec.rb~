@@ -186,7 +186,7 @@ describe UsersController do
 	
 		describe "succes" do
 			before(:each) do
-				@attr = { :nom => "Nouvel Utilisateur", :email => "user@exemple.com", :password => "foobar", :password_confirmation => "foobar", :weight => 80, :bestWeight => 78, :height => 195 }
+				@attr = { :nom => "Nouvel Utilisateur", :email => "user@exemple.com", :password => "foobar", :password_confirmation => "foobar" }
 			end
 			
 			it "devrait creer un nouvel utilisateur" do

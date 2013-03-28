@@ -3,8 +3,8 @@ Factory.define :user do |user|
 	user.email									"b.arnou05@gmail.com"
 	user.password								"foobar"
 	user.password_confirmation	"foobar"
-	user.weight									82
-	user.bestWeight								80
+	user.weight									80
+	user.bestWeight								82
 	user.height									195
 end
 

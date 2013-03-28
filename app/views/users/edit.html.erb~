@@ -12,11 +12,11 @@
   </div>
   <div class="field">
     <%= f.label :password, "Mot de passe" %><br />
-    <%= f.password_field :password %>
+    <%= f.text_field :password %>
   </div>
   <div class="field">
     <%= f.label :password_confirmation, "Confirmation du mot de passe" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
   </div>
   <div class="field">
 		<%= f.label :weight, "Poids" %><br />

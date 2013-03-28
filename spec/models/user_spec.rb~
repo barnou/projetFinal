@@ -6,10 +6,7 @@ describe User do
 			:nom => "Baptiste Arnou", 
 			:email => "b.arnou05@gmail.com",
 			:password => "ce1mdpp",
-			:password_confirmation => "ce1mdpp",
-			:weight => 80,
-			:bestWeight => 78,
-			:height => 195
+			:password_confirmation => "ce1mdpp"
 			}
 	end
 	

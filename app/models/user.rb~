@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
 						   :numericality => {:greater_than => 0, :less_than => :weight }
 						   
 	validates :height, :presence => true,
-					   :length => { :within => 1..4 },
+					   :length => { :within => 1..3 },
 					   :numericality => {:greater_than => 0, :less_than => 300 }
 											 
 	before_save :encrypt_password
